@@ -12,6 +12,8 @@ class StockholmToolbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var topBarHeight = MediaQuery.of(context).viewPadding.top;
+
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 8.0,
@@ -26,9 +28,18 @@ class StockholmToolbar extends StatelessWidget {
           ),
         ),
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: children,
+      child: Column(
+        children: [
+          SizedBox(
+            height: topBarHeight,
+          ),
+          Expanded(
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: children,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -86,6 +97,7 @@ class StockholmToolbarButton extends StatelessWidget {
             child: Text(
               label!,
               style: Theme.of(context).textTheme.bodyText2,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
