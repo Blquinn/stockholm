@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:stockholm/src/colors.dart';
 
 class StockholmThemeData {
-  static ThemeData light({StockholmColor? accentColor}) {
-    var theme = ThemeData.light();
+  static ThemeData light(
+      {StockholmColor? accentColor, String? fontFamily, bool? useMaterial3}) {
+    var theme = ThemeData(
+        brightness: Brightness.light,
+        fontFamily: fontFamily,
+        useMaterial3: useMaterial3);
     var colors = StockholmColors.fromBrightness(Brightness.light);
     accentColor ??= colors.blue;
 
@@ -41,8 +45,13 @@ class StockholmThemeData {
     );
   }
 
-  static ThemeData dark({StockholmColor? accentColor}) {
-    var theme = ThemeData.dark();
+  static ThemeData dark(
+      {StockholmColor? accentColor, String? fontFamily, bool? useMaterial3}) {
+    var theme = ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: fontFamily,
+        useMaterial3: useMaterial3);
+
     var colors = StockholmColors.fromBrightness(Brightness.dark);
     accentColor ??= colors.blue;
 
