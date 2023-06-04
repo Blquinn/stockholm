@@ -170,7 +170,7 @@ class _TableHeader extends StatelessWidget {
           child: DefaultTextStyle(
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle2!,
+            style: Theme.of(context).textTheme.titleSmall!,
             child: cell,
           ),
         ),
@@ -185,7 +185,7 @@ class _TableHeader extends StatelessWidget {
               bottom:
                   BorderSide(color: Theme.of(context).dividerColor, width: 1.0),
             ),
-            color: Theme.of(context).backgroundColor,
+            color: Theme.of(context).colorScheme.background,
           ),
       height: _headerHeight,
       padding: const EdgeInsets.symmetric(horizontal: _horizontalRowPadding),
@@ -228,7 +228,7 @@ class _TableRow extends StatelessWidget {
           child: DefaultTextStyle(
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodyText2!.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: selected ? Colors.white : null,
                 ),
             child: cell,

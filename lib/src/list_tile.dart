@@ -110,7 +110,7 @@ class StockholmListTileHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: DefaultTextStyle(
-        style: Theme.of(context).textTheme.caption!,
+        style: Theme.of(context).textTheme.bodySmall!,
         child: child,
       ),
     );
