@@ -87,11 +87,11 @@ class _StockholmMenuItemState extends State<StockholmMenuItem> {
 
     TextStyle textStyle;
     if (enabled) {
-      textStyle = Theme.of(context).textTheme.bodyText2!.copyWith(
+      textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: _hover || (_selected && _flashing) ? Colors.white : null,
           );
     } else {
-      textStyle = Theme.of(context).textTheme.bodyText2!.copyWith(
+      textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: Theme.of(context).disabledColor,
           );
     }
