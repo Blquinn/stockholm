@@ -62,8 +62,8 @@ class _StockholmTableState extends State<StockholmTable> {
 
   @override
   Widget build(BuildContext context) {
-    var altBgColor =
-        widget.altBackgroundColor ?? Theme.of(context).selectedRowColor;
+    var altBgColor = widget.altBackgroundColor ??
+        Theme.of(context).listTileTheme.selectedTileColor;
 
     return LayoutBuilder(builder: (context, constraints) {
       double _totalColumnSpace =
