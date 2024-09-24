@@ -107,7 +107,10 @@ class _StockholmTableState extends State<StockholmTable> {
     var themeAltColor = Theme.of(context).brightness == Brightness.light
         ? Colors.black.withOpacity(0.045)
         : Colors.white12;
-    var altBgColor = widget.altBackgroundColor ?? themeAltColor;
+
+    var altBgColor = widget.altBackgroundColor ??
+      Theme.of(context).listTileTheme.selectedTileColor ?? 
+      themeAltColor;
 
     var isWindows = Theme.of(context).platform == TargetPlatform.windows;
     var horizontalRowPadding = _horizontalRowPadding(context);
