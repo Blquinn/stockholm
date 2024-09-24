@@ -33,6 +33,8 @@ class StockholmToolbar extends StatelessWidget {
             ),
           );
 
+    var topBarHeight = MediaQuery.of(context).viewPadding.top;
+
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 8.0,
@@ -42,9 +44,17 @@ class StockholmToolbar extends StatelessWidget {
         color: backgroundColor,
         border: border,
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: children,
+      child: Column(
+        children: [
+          SizedBox(
+            width: double.infinity,
+            height: topBarHeight,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: children,
+          ),
+        ],
       ),
     );
   }
