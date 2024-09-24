@@ -5,8 +5,13 @@ class StockholmThemeData {
   static ThemeData light({
     StockholmColor? accentColor,
     TargetPlatform? platform,
+    String? fontFamily,
   }) {
-    var theme = ThemeData.light(useMaterial3: false);
+    var theme = ThemeData(
+      brightness: Brightness.light,
+      useMaterial3: false,
+      fontFamily: fontFamily,
+    );
     var colors = StockholmColors.fromBrightness(Brightness.light);
     accentColor ??= colors.blue;
     platform ??= theme.platform;
@@ -53,8 +58,13 @@ class StockholmThemeData {
   static ThemeData dark({
     StockholmColor? accentColor,
     TargetPlatform? platform,
+    String? fontFamily,
   }) {
-    var theme = ThemeData.dark(useMaterial3: false);
+    var theme = ThemeData(
+      brightness: Brightness.dark,
+      useMaterial3: false,
+      fontFamily: fontFamily,
+    );
     var colors = StockholmColors.fromBrightness(Brightness.dark);
     accentColor ??= colors.blue;
     platform ??= theme.platform;
