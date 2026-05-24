@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
+import 'package:flutter_ionicons/flutter_ionicons.dart';
 
 class StockholmExpansionTile extends StatefulWidget {
   const StockholmExpansionTile({

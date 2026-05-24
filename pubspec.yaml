@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ionicons: ^0.2.2
+  flutter_ionicons: ^8.0.13
 
 dev_dependencies:
   flutter_test:

@@ -9,8 +9,7 @@ import 'package:example/src/tables.dart';
 import 'package:example/src/text_fields.dart';
 import 'package:example/src/toolbar.dart';
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_ionicons/flutter_ionicons.dart';
 import 'package:stockholm/stockholm.dart';
 
 enum _DemoPage {
@@ -296,7 +295,7 @@ class _StockholmHomePageState extends State<StockholmHomePage> {
                     height: 22,
                     icon: appState.platform == _PlatformAppearance.windows
                         ? Icons.window_sharp
-                        : MdiIcons.appleFinder,
+                        : Ionicons.logo_windows,
                     onPressed: () {
                       setState(() {
                         var idx = appState.platform.index + 1;
